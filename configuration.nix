@@ -38,15 +38,11 @@
     rsync
     rclone
     home-manager
-    zed-editor
+
     nil
     vivaldi
     bitwarden-desktop
     telegram-desktop
-    fcitx5
-    fcitx5-rime
-    rime-ice
-    fcitx5-mozc-ut
     mozcdic-ut-skk-jisyo
     mozcdic-ut-sudachidict
     mozcdic-ut-personal-names
@@ -60,10 +56,11 @@
     koreader
     calibre
     kazumi
-    kdePackages.fcitx5-with-addons
   ];
   time.timeZone = "Asia/Hong_Kong";
-  i18n.defaultLocale = "en_US.UTF-8";
-
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocales = [ "zh_CN.UTF-8/UTF-8" ];
+  };
   system.stateVersion = "25.05";
 }
